@@ -166,7 +166,14 @@ for (let i = start; i < target; i *= 2) {
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+ if (start <= 0 || rate <= 0) {
+  return undefined;
+ }
+ let years = 0
+ for (let i = start; i < target; i *= (1 + rate)) {
+  years++; 
+ }
+return years;
 }
 
 /**
@@ -192,7 +199,19 @@ export function getCompoundTime(start, rate, target) {
  * moveWater(7, 3); // 1
  */
 export function moveWater(colander, bucket) {
-  // TODO
+let trips = 0
+let total = 0
+let i = colander
+
+while (total < bucket) {
+  total += i;
+  trips ++;
+
+  if (i > 1) {
+    i--;
+  }
+}
+return trips;
 }
 
 /**
@@ -212,5 +231,17 @@ export function moveWater(colander, bucket) {
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
 export function fizzbuzz(n) {
-  // TODO
+for (let i = 1; i <= n; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+  console.log("fizzbuzz"); 
+  } else if (i % 3 === 0) {
+    console.log("fizz");
+  } else if (i % 5 === 0) {
+    console.log("buzz");
+  } else {
+    console.log(i);
+  }
+ }
 }
+    
+
