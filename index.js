@@ -95,7 +95,9 @@ return total;
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+ for (let i = n; 1 <= i; i--) {
+    console.log(i);
+ }
 }
 
 /**
@@ -110,7 +112,13 @@ export function countdown(n) {
  * sumOddsToN(1); // 1
  */
 export function sumOddsToN(n) {
-  // TODO
+let total = 0
+  for (let i = 1; i <= n; i ++) {
+  if (i % 2 !== 0) {
+    total += i;
+  }
+}
+return total
 }
 
 /**
@@ -124,14 +132,22 @@ export function sumOddsToN(n) {
  *
  * @example
  * getGrowthTime(1, 8); // 60
- * @example
+ * @exampletr
  * getGrowthTime(2, 78); // 120
  * @example
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
-  // TODO
-}
+ if (start <= 0) {
+    return undefined; 
+  }
+  let minutes = 0;
+for (let i = start; i < target; i *= 2) {
+    minutes += 20;
+} 
+  return minutes;
+    }
+
 
 /**
  * The amount of money in a savings account grows by a certain rate every year.
