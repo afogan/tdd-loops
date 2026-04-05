@@ -11,7 +11,13 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+let result = "";
+let i = 0;
+while (i < n) {
+result += word;
+  i++;
+}
+  return result;
 }
 
 /**
@@ -27,8 +33,16 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  // TODO
+let result = "";
+let i = 0
+while (i < n-1) {
+result += word;
+
+  i++;
 }
+  return result;
+}
+
 
 /**
  * @param {number} n - The number to stop at
@@ -42,7 +56,11 @@ export function echoWithSpace(word, n) {
  * sumTo(100); // 5050
  */
 export function sumTo(n) {
-  // TODO
+let total = 0
+  for (let i = 1; i<=n; i++) {
+    total += i;
+  }
+ return total;
 }
 
 /**
@@ -58,7 +76,11 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+let total =0
+for (let i = a; i<=z; i++) {
+  total += i;
+}
+return total;
 }
 
 /**
